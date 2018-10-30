@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-server-ha
+
+---
+spring:
+     profiles: discovery-server-01
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.20.10.3:8762/eureka/
+server:
+  port: 8761
+
+---
+spring:
+     profiles: discovery-server-02
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.20.10.3:8761/eureka/
+server:
+  port: 8762

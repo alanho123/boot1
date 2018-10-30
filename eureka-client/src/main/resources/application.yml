@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.20.10.3:8761/eureka/, http://172.20.10.3:8762/eureka/
+  instance:
+    prefer-ip-address: true
