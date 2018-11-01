@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: microservice-discovery-eureka
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://172.20.10.3:8761/eureka/
+  server:
+    eviction-interval-timer-in-ms: 15000

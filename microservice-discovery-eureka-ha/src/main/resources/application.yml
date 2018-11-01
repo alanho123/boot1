@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: microservice-discovery-eureka-ha
+---
+server:
+  port: 8761
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.20.10.3:8762/eureka/
+spring:
+  profiles: eureka01
+
+---
+server:
+  port: 8762
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.20.10.3:8761/eureka/
+spring:
+  profiles: eureka02
