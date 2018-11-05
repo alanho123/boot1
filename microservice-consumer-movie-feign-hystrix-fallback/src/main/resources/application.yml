@@ -1,0 +1,12 @@
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    UserFeignClient#findById():
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500
+      circuitBreaker:
+        requestVolumeThreshold: 3

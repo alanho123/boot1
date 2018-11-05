@@ -1,0 +1,14 @@
+server:
+  port: 8010
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.20.10.3:8761/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: microservices-fegin-hystrix-test
+feign:
+  hystrix:
+    enabled: true
