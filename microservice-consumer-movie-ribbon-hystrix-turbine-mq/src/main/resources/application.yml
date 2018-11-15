@@ -1,0 +1,17 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: microservice-consumer-movie-ribbon-hystrix-turbine-mq
+  rabbitmq:
+    host: 172.20.10.3
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://172.20.10.3:8761/eureka/

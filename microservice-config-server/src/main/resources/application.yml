@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          username:
+          password:
+          uri: https://github.com/alanho123/services-config

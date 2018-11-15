@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          username:
+          password: 
+          uri: https://github.com/alanho123/services-config
+          force-pull: true
+    bus:
+      enabled: true
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 172.20.10.3
+    port: 5672
+management:
+  security:
+    enabled: false
