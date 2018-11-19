@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+server:
+  port: 8000
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.sleuth: DEBUG
