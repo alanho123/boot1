@@ -1,16 +1,18 @@
-package com.example.microserviceconfigserver;
+package com.example.springbootadmin;
 
+import de.codecentric.boot.admin.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
-@EnableConfigServer
+@EnableAdminServer
 @EnableDiscoveryClient
-public class MicroserviceConfigServerApplication {
+public class SpringBootAdminApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceConfigServerApplication.class, args);
+		SpringApplication.run(SpringBootAdminApplication.class, args);
 	}
+
 }
+

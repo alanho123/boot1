@@ -1,9 +1,18 @@
 spring:
   application:
     name: spring-cloud-config
+  profiles:
+    active: test
   cloud:
     config:
-      uri: http://localhost:8080
-management:
-  security:
-    enabled: false
+#      uri: http://server01:8080
+      fail-fast: true
+      discovery:
+        service-id: MICROSERVICE-CONFIG-SERVER
+        enabled: true
+      label: master
+      profile: ${spring.profiles.active}
+      name: ${spring.application.name}
+
+
+

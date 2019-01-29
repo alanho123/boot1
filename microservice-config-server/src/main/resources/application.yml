@@ -8,5 +8,20 @@ spring:
       server:
         git:
           username:
-          password:
+          password: 
           uri: https://github.com/alanho123/services-config
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://server01:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10

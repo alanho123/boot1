@@ -13,7 +13,7 @@ eureka:
     healthcheck:
       enabled: true
     service-url:
-      defaultZone: http://user:password123@172.20.10.3:8761/eureka/
+      defaultZone: http://server01:8761/eureka/
   instance:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
